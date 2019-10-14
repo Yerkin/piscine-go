@@ -1,1 +1,1 @@
-ls -l | awk 'NR%2==0'
+find -type f,d | wc -l
