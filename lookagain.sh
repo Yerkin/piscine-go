@@ -1,1 +1,1 @@
-find . -iname "*.sh" | cut -d "." -f2 | cut -d "/" -f2
+find ${dir} -iname "*.sh" | cut -d "." -f2 | cut -d "/" -f2
