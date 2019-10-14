@@ -1,1 +1,1 @@
-find . -not -iname "*sh"
+find . -iname "*sh" | cut -d "." -f1
