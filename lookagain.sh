@@ -1,1 +1,1 @@
-find . -iname "*sh" | cut -d "." -f1
+find . -iname "*sh" | cut -d "." -f2
