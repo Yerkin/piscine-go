@@ -1,1 +1,1 @@
-find -mindepth 2 -iname "*.sh" | cut -d "." -f2 | cut -d "/" -f2
+find . -name "*.sh" | cut -d "." -f2 | cut -d "/" -f2
