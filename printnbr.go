@@ -2,7 +2,7 @@ package piscine
 
 import "github.com/01-edu/z01"
 
-func checkit(v int){
+func checkit(v int) {
 	c := '0'
 	if v == 0 {
 		z01.PrintRune(c)
@@ -19,8 +19,6 @@ func checkit(v int){
 	}
 	z01.PrintRune(c)
 	return
-
-
 }
 
 func PrintNbr(n int) {
