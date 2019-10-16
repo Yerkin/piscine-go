@@ -13,9 +13,9 @@ func PrintNbr(n int) {
 		if f != 0 {
 			PrintNbr(f)
 		}
-		k := ((n % 10 * t)) + '0'
+		k := (n % 10 * t) + '0'
 		z01.PrintRune(rune(k))
 	} else {
-		z01.PrintRune('0')	
+		z01.PrintRune('0')
 	}
 }
