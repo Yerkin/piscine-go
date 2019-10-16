@@ -16,6 +16,14 @@ func PrintComb2() {
 						if (a != '9' || b != '8') || (c != '9' || d != '9') {
 							z01.PrintRune(44)
 							z01.PrintRune(32)
+						} else if a < c && b >= d {
+							z01.PrintRune(a)
+							z01.PrintRune(b)
+							z01.PrintRune(32)
+							z01.PrintRune(c)
+							z01.PrintRune(d)
+							z01.PrintRune(44)
+							z01.PrintRune(32)
 						}
 					}
 				}
