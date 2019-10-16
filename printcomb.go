@@ -24,9 +24,9 @@ func PrintComb() {
 			c = 48
 			b = b + i
 		}
-			a = a + i
-			b = a + i
-			c = c + i	
+	a = a + i
+	b = a + i
+	c = c + i	
 	}
 	z01.PrintRune(10)
 }
