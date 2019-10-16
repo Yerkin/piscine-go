@@ -10,7 +10,7 @@ func PrintComb() {
 	for a <= 55 {
 		for b <= 56 {
 			for c <= 57 {
-				if a < b && b < c{
+				if a < b && b < c {
 					z01.PrintRune(a)
 					z01.PrintRune(b)
 					z01.PrintRune(c)
