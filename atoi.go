@@ -9,7 +9,7 @@ func Atoi(s string) int {
 	if byte(a_s[0]) == 45 {
 		pl = -1
 		a_s[0] = '0'
-	} else if a_s[0] == 43 {
+	} else if byte(a_s[0]) == 43 {
 		a_s[0] = '0'
 	}
 	for _, word := range a_s {
