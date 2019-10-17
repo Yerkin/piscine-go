@@ -6,11 +6,14 @@ func Atoi(s string) int {
 	checker := true
 	a_s := []rune(s)
 	pl := 1
-	if byte(a_s[0]) == 45 {
-		pl = -1
-		a_s[0] = '0'
-	} else if byte(a_s[0]) == 43 {
-		a_s[0] = '0'
+
+	if s != "" {
+		if byte(a_s[0]) == 45 {
+			pl = -1
+			a_s[0] = '0'
+		} else if byte(a_s[0]) == 43 {
+			a_s[0] = '0'
+		}
 	}
 	for _, word := range a_s {
 		if byte(word) >= 48 && byte(word) <= 57 {
@@ -23,6 +26,7 @@ func Atoi(s string) int {
 			checker = false
 		}
 	}
+
 	if checker {
 		return o_number * pl
 	} else {
