@@ -13,5 +13,3 @@ func BasicAtoi(s string) int {
 	}
 	return o_number
 }
-
-	
