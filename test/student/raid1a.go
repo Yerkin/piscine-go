@@ -10,7 +10,7 @@ func Raid1a(x, y int) {
 			for j := 0; j < x; j++ {
 				if i == 0 && j == 0 {
 					z01.PrintRune('o')
-					if j == x-1 {
+					if j == x-1 && i != y-1 {
 						z01.PrintRune(10)
 					}
 
@@ -42,8 +42,6 @@ func Raid1a(x, y int) {
 				}
 			}
 		}
-		z01.PrintRune(10)
-	} else {
 		z01.PrintRune(10)
 	}
 }
