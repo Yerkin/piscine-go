@@ -1,8 +1,8 @@
-package piscine
+package eightqueens
 
 import "github.com/01-edu/z01"
 
-var ans [9]rune
+var ans [8]rune
 var ban [9]bool
 var ans2 [9]int
 
