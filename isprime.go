@@ -1,7 +1,7 @@
 package piscine
 
 func IsPrime(nb int) bool {
-	c := 0
+	c := 1
 	for i := 2; i <= nb; i++ {
 		if nb%i == 0 {
 			c++
