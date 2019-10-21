@@ -5,10 +5,10 @@ func FindNextPrime(nb int) int {
 		return nb
 	} else {
 		for {
-			nb = nb + 1
 			if IsPrime(nb) {
 				return nb
 			}
+			nb = nb + 1
 		}
 	}
 }
