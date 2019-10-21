@@ -1,4 +1,4 @@
-package main
+package piscine
 
 import "github.com/01-edu/z01"
 
@@ -45,7 +45,7 @@ func EightQueens() {
 			//	fmt.Println("    <<< THIS SHIT")
 			if put == true {
 				ban[cur] = true
-				ans[cnt+1] = i
+				ans[cnt] = i
 				ans2[cnt+1] = cur
 				EightQueens()
 				ban[cur] = false
