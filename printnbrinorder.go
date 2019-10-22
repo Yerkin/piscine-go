@@ -21,7 +21,9 @@ func PrintNbrInOrder(n int) {
 
 		for index, num := range my_arr {
 			if num != 0 {
-				z01.PrintRune(rune(index + 48))
+				for i := 0; i < num; i++ {
+					z01.PrintRune(rune(index + 48))
+				}
 			}
 		}
 	}
