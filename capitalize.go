@@ -13,9 +13,25 @@ func Capitalize(s string) string {
 	}
 
 	for i := 1; i <= len_a; i++ {
-		if (my_arr[i-1] < 'A' || my_arr[i-1] > 'Z') && (my_arr[i] >= 'a' && my_arr[i] <= 'z') && (my_arr[i-1] < 'a' || my_arr[i-1] > 'z') && (my_arr[i-1] < '0' || my_arr[i-1] > '9') {
+		if (my_arr[i-1] < 'A' || my_arr[i-1] > 'Z') &&
+			(my_arr[i] >= 'a' && my_arr[i] <= 'z') &&
+			(my_arr[i-1] < 'a' || my_arr[i-1] > 'z') &&
+			(my_arr[i-1] < '0' || my_arr[i-1] > '9') {
 			my_arr[i] = rune(my_arr[i] - 32)
 		}
+		if (my_arr[i-1] >= 'A' && my_arr[i-1] <= 'Z') &&
+			(my_arr[i] >= 'A' && my_arr[i] <= 'Z') {
+			my_arr[i] = rune(my_arr[i] + 32)
+		}
+		if (my_arr[i-1] >= 'a' && my_arr[i-1] <= 'z') &&
+			(my_arr[i] >= 'A' && my_arr[i] <= 'Z') {
+			my_arr[i] = rune(my_arr[i] + 32)
+		}
+		if (my_arr[i-1] >= '0' && my_arr[i-1] <= '9') &&
+			(my_arr[i] >= 'A' && my_arr[i] <= 'Z') {
+			my_arr[i] = rune(my_arr[i] + 32)
+		}
+
 	}
 
 	return string(my_arr)
