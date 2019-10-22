@@ -22,6 +22,7 @@ func Index(s string, toFind string) int {
 					ok = false
 					break
 				}
+				cur_ch++
 			}
 			if ok == true {
 				return i
