@@ -30,5 +30,8 @@ func Index(s, t string) int {
 			}
 		}
 	}
+	if t == "" {
+		return 0
+	}
 	return -1
 }
