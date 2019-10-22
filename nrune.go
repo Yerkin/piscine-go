@@ -5,7 +5,7 @@ func NRune(s string, n int) rune {
 	for index := range s {
 		my_c = index
 	}
-	if (my_c + 1) >= n {
+	if (my_c+1) >= n && n > 0 {
 		my_arr := []rune(s)
 		return (my_arr[n-1])
 	} else {
