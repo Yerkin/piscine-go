@@ -8,7 +8,7 @@ func IsPrintable(str string) bool {
 	}
 
 	for i := 0; i <= ln; i++ {
-		if (my_arr[i] < 'A' || my_arr[i] > 'Z') && (my_arr[i] < 'a' || my_arr[i] > 'z') {
+		if my_arr[i] < 32 {
 			return false
 		}
 	}
