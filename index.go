@@ -1,24 +1,25 @@
 package piscine
 
-func find_len(my_s string) int {
-	my_len := 0
-	for index := range my_s {
-		my_len = index
+func Index(s, t string) int {
+	ln := 0
+	ln2 := 0
+	for _, c := range s {
+		if c == c {
+			ln++
+		}
 	}
-	return my_len + 1
-}
 
-func Index(s string, toFind string) int {
-
-	len_a := find_len(s)
-	len_b := find_len(toFind)
-
-	for i := 0; i < len_a; i++ {
-		if len_b != 0 && s[i] == toFind[0] {
+	for _, c := range t {
+		if c == c {
+			ln2++
+		}
+	}
+	for i := 0; i < ln; i++ {
+		if ln2 != 0 && s[i] == t[0] {
 			ok := true
 			cur_ch := 0
-			for j := 1; j < len_b; j++ {
-				if i+cur_ch >= len_a || toFind[j] != s[i+cur_ch] {
+			for j := 0; j < ln2; j++ {
+				if i+cur_ch >= ln || t[j] != s[i+cur_ch] {
 					ok = false
 					break
 				}
@@ -28,7 +29,6 @@ func Index(s string, toFind string) int {
 				return i
 			}
 		}
-
 	}
 	return -1
 }
