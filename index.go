@@ -16,8 +16,9 @@ func Index(s string, toFind string) int {
 	for i := 0; i < len_a; i++ {
 		if len_b != 0 && s[i] == toFind[0] {
 			ok := true
+			cur_ch := 0
 			for j := 1; j < len_b; j++ {
-				if s[i+j] != toFind[j] {
+				if i+cur_ch >= len_a || toFind[j] != s[i+cur_ch] {
 					ok = false
 					break
 				}
