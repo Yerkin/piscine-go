@@ -7,27 +7,16 @@ import (
 	"github.com/01-edu/z01"
 )
 
-func order(str1 string) {
-	arg := []rune(str1)
-
-	ln := 0
-
-	for c := range arg {
-		ln = c
+func order(s string) {
+	var a [5000]int
+	for _, c := range s {
+		a[int(c)]++
 	}
-
-	for i := 0; i < ln; i++ {
-		for j := i + 1; j < ln; j++ {
-			if arg[i] < arg[j] {
-				arg[i], arg[j] = arg[j], arg[i]
-			}
+	for i, c := range a {
+		for c > 0 {
+			z01.PrintRune(rune(i))
+			c--
 		}
-	}
-
-	for i := ln; i >= 0; i-- {
-
-		z01.PrintRune(arg[i])
-
 	}
 	z01.PrintRune('\n')
 }
