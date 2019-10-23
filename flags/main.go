@@ -56,8 +56,10 @@ func main() {
 	if ln != -1 {
 		if myArr[0] == "-h" || myArr[0] == "--help" {
 			help()
+
 		} else if myArr[0] == "--order" || myArr[0] == "-o" {
 			order(myArr[1])
+
 		} else if myArr[0][0:3] == "--i" || myArr[0][0:2] == "-i" {
 			if ln < 2 {
 				if myArr[0][0:3] == "--i" {
@@ -67,10 +69,16 @@ func main() {
 				}
 			} else {
 				myStr := ""
+				for i := 1; i <= ln; i++ {
+					if myArr[i] != "-o" && myArr[i] != "--order" {
+						myStr = insert(myStr, myArr[i])
+					}
+				}
+
 				if myArr[0][0:3] == "--i" {
-					myStr = insert(myArr[2], myArr[0][9:])
+					myStr = insert(myStr, myArr[0][9:])
 				} else {
-					myStr = insert(myArr[2], myArr[0][3:])
+					myStr = insert(myStr, myArr[0][3:])
 				}
 				order(myStr)
 			}
