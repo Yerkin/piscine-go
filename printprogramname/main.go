@@ -7,14 +7,9 @@ import (
 )
 
 func main() {
-	my_args := os.Args[0]
-	my_arr := []rune(my_args)
-	ln := 0
-	for i := range my_args {
-		ln = i
-	}
-	for i := 0; i <= ln; i++ {
-		z01.PrintRune(rune(my_arr[i]))
+	arg := os.Args
+	for _, w := range arg[0] {
+		z01.PrintRune(w)
 	}
 	z01.PrintRune('\n')
 }
