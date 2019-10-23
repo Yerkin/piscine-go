@@ -14,6 +14,7 @@ func main() {
 	}
 	if ln >= 1 {
 		if my_arr[0] == "--upper" {
+			z01.PrintRune(' ')
 			for i := 1; i <= ln; i++ {
 				num := 0
 				for _, w := range my_arr[i] {
