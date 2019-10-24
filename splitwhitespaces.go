@@ -8,7 +8,7 @@ func SplitWhiteSpaces(str string) []string {
 			ln++
 		}
 	}
-	ans := make([]string, ln+1)
+	ans := make([]string, ln)
 	index := 0
 	myStr := ""
 	for i, w := range str {
@@ -23,6 +23,7 @@ func SplitWhiteSpaces(str string) []string {
 			myStr = myStr + string(w)
 		}
 	}
+
 	if str[a+1:] != "" {
 		ans[index] = str[a+1:]
 	}
