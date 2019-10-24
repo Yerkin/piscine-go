@@ -6,54 +6,40 @@ import (
 	"github.com/01-edu/z01"
 )
 
-func chekit(x rune) bool {
+func check(x rune) bool {
 	if x == 'a' || x == 'A' || x == 'e' || x == 'E' || x == 'o' || x == 'O' || x == 'u' || x == 'U' || x == 'i' || x == 'I' {
 		return true
 	}
 	return false
 }
-
 func main() {
-	myArr := os.Args[1:]
+	arg := os.Args[1:]
+	rep := []rune{}
+	ans := ""
 	ln := 0
-
-	for i := range myArr {
-		ln = i + 1
-	}
-
-	if ln == 0 {
-		z01.PrintRune('\n')
-	} else {
-
-		myStr := myArr[0]
-		for i := 1; i < ln; i++ {
-			myStr = myStr + " " + myArr[i]
-		}
-
-		my_ans := []rune(myStr)
-
-		ln2 := 0
-
-		for i := range my_ans {
-			ln2 = i
-		}
-
-		j := ln2
-
-		for i := 0; i <= ln2; i++ {
-
-			if j < i {
-				break
+	IsF := true
+	for _, c := range arg {
+		for _, j := range c {
+			if check(j) {
+				rep = append(rep, j)
+				ln++
 			}
-
-			if chekit(my_ans[j]) && chekit(my_ans[i]) {
-
-			}
-			j--
-
 		}
-		// fmt.Println(string(my_ans))
-
+		if IsF {
+			ans = c
+			IsF = false
+			continue
+		}
+		ans = ans + " " + c
 	}
-
+	cur := 0
+	for _, c := range ans {
+		if check(c) {
+			z01.PrintRune(rep[ln-cur-1])
+			cur++
+		} else {
+			z01.PrintRune(c)
+		}
+	}
+	z01.PrintRune('\n')
 }
