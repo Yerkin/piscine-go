@@ -23,6 +23,8 @@ func SplitWhiteSpaces(str string) []string {
 			myStr = myStr + string(w)
 		}
 	}
-	ans[index] = str[a+1:]
+	if str[a+1:] != "" {
+		ans[index] = str[a+1:]
+	}
 	return ans
 }
