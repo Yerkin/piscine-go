@@ -3,6 +3,7 @@ package piscine
 func SplitWhiteSpaces(str string) []string {
 	a := 0
 	ln := 0
+
 	ok2 := false
 	for c := range str {
 
@@ -27,7 +28,9 @@ func SplitWhiteSpaces(str string) []string {
 				a = i
 			}
 		} else {
-			myStr = myStr + string(w)
+			if w != ' ' {
+				myStr = myStr + string(w)
+			}
 		}
 	}
 
