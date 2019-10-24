@@ -13,10 +13,12 @@ func SplitWhiteSpaces(str string) []string {
 	myStr := ""
 	for i, w := range str {
 		if w == '\n' || w == ' ' || w == '\t' {
-			ans[index] = myStr
-			index++
-			myStr = ""
-			a = i
+			if myStr != "" {
+				ans[index] = myStr
+				index++
+				myStr = ""
+				a = i
+			}
 		} else {
 			myStr = myStr + string(w)
 		}
